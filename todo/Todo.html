@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<script>
+    document.querySelectorAll('.todo_checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const todo = this.closest('.todo');
+            if (this.checked) {
+                todo.parentNode.appendChild(todo);
+            } else {
+                todo.parentNode.prepend(todo);
+            }
+        });
+    });
+</script>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="logo.png" alt="ToDo List">
+                <P>ToDo List</P>
+            </div>
+            <ul>
+                <a href="todo.html">
+                    <li>Home</li>
+                </a>
+                <a href="todo.html">
+                    <li>Contacts</li>
+                </a>
+                <a href="todo.html">
+                    <li>Sign in</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="scroll-container">
+            <img class="scroll-img" src="scroll.png" alt="Scroll image">
+            <div class="content">
+                <div class="container">
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                    <div class="todo">
+                        <input class="todo_value" type="text" placeholder="Write here">
+                        <input class="todo_checkbox" type="checkbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
